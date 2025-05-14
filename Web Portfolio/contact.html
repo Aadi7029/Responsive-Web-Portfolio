@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Aditya Mishra</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-section {
+      padding: 60px 20px;
+      background-color: #ffffff;
+    }
+
+    .contact-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #f7f7f7;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-container h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #00adb5;
+    }
+
+    .contact-links {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .contact-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #00adb5;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .contact-links a:hover {
+      color: #007f86;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="index.html">Aditya Mishra</a></div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="contact-section fade-in">
+    <div class="contact-container">
+      <h2>Contact Me</h2>
+
+      <div class="contact-links">
+        <p>You can reach out to me through the following:</p>
+        <a href="mailto:youremail@example.com">Email</a>
+        <a href="https://github.com/Aadi7029" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/adityam8249/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

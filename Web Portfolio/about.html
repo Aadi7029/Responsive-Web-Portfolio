@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>About Me | Aditya Mishra</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Animation styles */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav__content">
+            <div class="logo"><a href="index.html">Aditya Mishra</a></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="about-section fade-in">
+        <div class="about-container">
+            <h2>About Me</h2>
+            <p>Hello! I'm <strong>Aditya Mishra</strong>, a tech enthusiast and developer passionate about creating impactful digital solutions.</p>
+
+            <p>I am currently pursuing my <strong>B.Tech in Computer Science & Engineering</strong> at SOA University (ITER), where I’ve developed a solid foundation in both frontend and backend technologies.</p>
+
+            <p>I’ve completed internships in <strong>Web Development</strong> and <strong>Python programming</strong>, working on real-world projects using modern tools and technologies.</p>
+
+            <p>In addition to that, I have practical experience in <strong>2D Game Development using C++ and SFML</strong>, where I've developed interactive games with real-time rendering and basic physics.</p>
+
+            <p>I've also earned certifications in the following:</p>
+            <ul>
+                <li>
+                    <a href="https://drive.google.com/file/d/188ApQ4YJvspxzhOwVyi-AayixNCCUWRl/view" target="_blank">
+                        Microsoft Cerytifiesd: Microsoft Azure AI Fundamentals
+                    </a>
+                </li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1uFVmaPSm8HFfb7o9g_6jJXOss0iuCsch/view" target="_blank">
+                        AI With Python certified by Coincent
+                    </a>
+                </li>
+            </ul>
+
+            <p>Here's a summary of my core skills:</p>
+            <ul>
+                <li>Proficient in <strong>HTML, CSS, Java, Python, and C++</strong></li>
+                <li>Hands-on experience in full-stack <strong>web application development</strong></li>
+                <li>Well-versed in <strong>problem-solving and algorithms</strong></li>
+                <li>Experience in <strong>game programming with SFML</strong></li>
+                <li>Certified in <strong>AI and Cloud technologies</strong></li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        // Animation script to reveal section on scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-in').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

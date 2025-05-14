@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portfolio | Aditya Mishra</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .portfolio-section {
+            padding: 60px 20px;
+            background-color: #ffffff;
+        }
+
+        .portfolio-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .portfolio-container h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #00adb5;
+            text-align: center;
+        }
+
+        .project-category {
+            margin-bottom: 40px;
+        }
+
+        .project-category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-left: 5px solid #00adb5;
+            padding-left: 15px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h4 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: #00adb5;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav__content">
+            <div class="logo"><a href="index.html">Aditya Mishra</a></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="portfolio-section fade-in">
+        <div class="portfolio-container">
+            <h2>My Projects</h2>
+
+            <div class="project-category">
+                <h3>🌐 HTML/CSS Projects</h3>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h4>Digital Timer</h4>
+                        <p>A simple, elegant digital timer built using HTML, CSS, and JavaScript.</p>
+                        <a href="https://github.com/Aadi7029/PRODIGY_WD_02.git" target="_blank">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <h4>Tic Tac Toe Game</h4>
+                        <p>A classic two-player game built with HTML, CSS, and interactive JavaScript logic.</p>
+                        <a href="https://github.com/Aadi7029/PRODIGY_WD_03.git" target="_blank">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <h4>Responsive Portfolio Website</h4>
+                        <p>Modern, responsive portfolio layout using HTML and CSS.</p>
+                        <a href="https://github.com/yourusername/responsive-portfolio" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-category">
+                <h3>💻 C++ Projects (Using SFML)</h3>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h4>Timberman Game</h4>
+                        <p>2D arcade-style chopping game made using C++ and SFML library.</p>
+                        <a href="https://github.com/Aadi7029/TimberMan.git" target="_blank">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <h4>Pong Game</h4>
+                        <p>A classic Pong clone featuring player controls and collision logic using SFML.</p>
+                        <a href="https://github.com/Aadi7029/Pong-Game.git" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Fade-in animation on scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
